@@ -53,7 +53,13 @@ export default {
 					},
 				});
 				const user: User = await res.json();
-				const resp = await fetch(`https://discord.com/api/v10/guilds/${env.DISCORD_GUILD_ID}/members/${user.id}`)
+				console.log(user);
+				const resp = await fetch(`https://discord.com/api/v10/guilds/${env.DISCORD_GUILD_ID}/members/${user.id}`, {
+					method: "PUT",
+					body: JSON.stringify({
+						access_token: token,
+					}),
+				});
 				return new Response(resp.ok ? "joined" : "failed");
 			} else {
 				return new Response("Missing code", { status: 400 });
