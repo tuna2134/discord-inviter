@@ -64,7 +64,7 @@ export default {
 						"Content-Type": "application/json",
 					}
 				});
-				console.log(await resp.json());
+				// console.log(await resp.json());
 				return new Response(resp.ok ? "joined" : "failed");
 			} else {
 				return new Response("Missing code", { status: 400 });
