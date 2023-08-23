@@ -13,9 +13,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - name: Install dep
-        run: npm install
+        run: pnpm install
       - name: Publish
-        run: npx wrangler deploy
+        run: pnpx wrangler deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
