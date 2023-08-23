@@ -1,6 +1,7 @@
 name = "discord-inviter"
 main = "src/worker.ts"
 compatibility_date = "2023-08-21"
+account_id = "5aaa5369426edda5aff32cc4d275826e"
  
 # [vars]
 # MY_VARIABLE = "production_value
