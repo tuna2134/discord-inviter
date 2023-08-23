@@ -31,7 +31,7 @@ export default {
 		} else if (url.pathname === "/callback") {
 			let code = url.searchParams.get("code");
 			if (code) {
-				const r = await fetch("https://discord.com/api/oauth2/token", {
+				const r = await fetch("https://discord.com/api/v10/oauth2/token", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/x-www-form-urlencoded",
