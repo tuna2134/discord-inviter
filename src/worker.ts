@@ -53,7 +53,7 @@ export default {
 					},
 				});
 				const user: User = await res.json();
-				console.log(user);
+				console.log(data);
 				const resp = await fetch(`https://discord.com/api/v10/guilds/${env.DISCORD_GUILD_ID}/members/${user.id}`, {
 					method: "PUT",
 					body: JSON.stringify({
