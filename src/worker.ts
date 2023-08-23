@@ -36,7 +36,7 @@ export default {
 					headers: {
 						"Content-Type": "application/x-www-form-urlencoded",
 					},
-					body: JSON.stringify({
+					body: new URLSearchParams({
 						client_id: env.DISCORD_CLIENT_ID,
 						client_secret: env.DISCORD_CLIENT_SECRET,
 						grant_type: 'authorization_code',
