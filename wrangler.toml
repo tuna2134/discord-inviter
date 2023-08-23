@@ -3,5 +3,7 @@ main = "src/worker.ts"
 compatibility_date = "2023-08-21"
 account_id = "5aaa5369426edda5aff32cc4d275826e"
  
-# [vars]
+[vars]
 # MY_VARIABLE = "production_value
+DISCORD_CLIENT_ID = "1079002929228415027"
+DISCORD_GUILD_ID = "961916734137315358"
