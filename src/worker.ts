@@ -2,6 +2,7 @@ export interface Env {
 	DISCORD_CLIENT_ID: string;
 	DISCORD_CLIENT_SECRET: string;
 	DISCORD_GUILD_ID: string;
+	DISCORD_TOKEN: string;
 }
 
 interface AccessTokenResponse {
@@ -58,6 +59,9 @@ export default {
 					body: JSON.stringify({
 						access_token: token,
 					}),
+					headers: {
+						"Authorization": "Bot " + env.DISCORD_TOKEN,
+					}
 				});
 				console.log(await resp.json());
 				return new Response(resp.ok ? "joined" : "failed");
