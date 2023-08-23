@@ -61,6 +61,7 @@ export default {
 					}),
 					headers: {
 						"Authorization": "Bot " + env.DISCORD_TOKEN,
+						"Content-Type": "application/json",
 					}
 				});
 				console.log(await resp.json());
